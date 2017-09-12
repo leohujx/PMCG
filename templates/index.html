@@ -1,0 +1,298 @@
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}index{% endblock %}
+
+{% block subtitle %}Malware Families{% endblock %}
+{% block content %}
+<table class="table table-condensed table-bordered table-stripped " style="word-break: break-all; word-wrap: break-word;
+        border:3px solid #d00;width: 100%;max-width: 100%;" ng-controller="tableController">
+        <tbody class="family-tbody">
+            <tr>
+                <td bgcolor="#e0e0e0">AccuTrack
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">Ackposts
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">Acnetdoor
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">Adrd
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">Adsms
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+            </tr>
+        <tr>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c3ac5578a361a61554ea9fe2bdfff96bb01aed8b0b2e46e7dae6393cf28adf3a6.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('AccuTrack')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c7ef54596fd2e2d5598218e3807646da6f804a86e0ba66519179c70b50364574d.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Ackposts')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c344d449e553113f529a3b121c3fc3369a1f9532ab1c65114338604de06dc6ec6.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Acnetdoor')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c1944d8ee5bdda3a1bd06555fdb10d3267ab0cc4511d1e40611baf3ce1b81e5e8.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Adrd')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c8a38dca85b00f4a167ad749d13330d608c8b293754653ffc12360678d4b4f00e.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Adsms')">
+            </td>
+        </tr>
+        <tr>
+             <td bgcolor="#e0e0e0">Aks
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">Ansca
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">Antares
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">Anti
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">Anudow
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c397bd767addb9e3bd672943b294846ec4abcee6f0633963a8bb86c6b6a278f1f.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Aks')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c854408e90e5312a0b89df01c6862c06d34e69c17cc57414ec300ab6123cc6d42.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Ansca')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c9df2c280a915a2a8b6508ddf3fbc67b5e0f1e1621d26bd4a06c202feb4f1b3c1.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Antares')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-cc5798860ae9ae80c3cc5c68657e32ed208d8e956e26d7dd8f9d0c84f49bf9d34.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Anti')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c073ec89d7e88e362ba439f96e636c40fceee45a0f386c5630638fd1384dd26a2.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Anudow')">
+            </td>
+        </tr>
+        <tr>
+             <td bgcolor="#e0e0e0">Arspam
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">BaseBridge
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">BeanBot
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">Bgserv
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">Biige
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c1d22924bbe5dce7696e18d880482b63ce19ca0746f8671aaec865cce143f6e6f.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Arspam')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c127b6fd0f713f4719040fbed6e8b221dd5497ec3f3380c9391a570360afd40bc.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('BaseBridge')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c881d0946545ef921f8a6c2d1fdcdaa4f20455269a9ff104c8b53a62e40d35a2c.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('BeanBot')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-ccae9e568746c2a730ce09ec595ab5741918338c7f73c20a548da66025415ed67.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Bgserv')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c2a2902b0014cb5ba3e0451aca4e89fe3c9f03e75a9115ff5cc4499678c23fcb0.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Biige')">
+            </td>
+        </tr>
+         <tr>
+             <td bgcolor="#e0e0e0">Booster
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">Bosm
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">Boxer
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">Cawitt
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">CellShark
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c1d04c6f60a280e97cef8f2b913c98edbbcc34b53bdaa5f511bd418f60f292aba.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Booster')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-cd83e9281b089ec2858a3403ec0a78ce606cba90efa72ed338c566486db3ff549.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Bosm')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c8fe9187aaa9d4d0140440c21a40bb90b347cb0ceb8e81b2d8c332b39a252291e.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Boxer')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-cb63c33cc71eda01b79572e1f8b82b703f9c088fde6966c7cf855f00f8c77775d.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Cawitt')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-cae877dc174dd9ddc0719bd1071cc061ad60b4ce29d091de0f9db893fd401730d.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('CellShark')">
+            </td>
+        </tr>
+        <tr>
+             <td bgcolor="#e0e0e0">CellSpy
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">Ceshark
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">CgFinder
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">Coogos
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">Copycat
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c106e18ce5a5299c6a0b497f8ebfc0ef4ac5197d2cc21ad3581afc1d019b036d7.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('CellSpy')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-cd1a3415dfdd3907de297dd7df2628923ca186a4523b2e6a9b3f660e70abafa8a.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Ceshark')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c57bdf1ddf453e9b48c41e073dc9ce491fdab2a5dacae0eaf118318eb4081bcbd.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('CgFinder')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c72c375ad8c95485aad793fa07e62a5556187ffc12d152427c3a4571290fddd48.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Coogos')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-cc8ba8381bf5d3f9591ee7d067a57fc6e39fcdf4a91ef15d3811722c7b2e14dd3.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Copycat')">
+            </td>
+        </tr>
+        <tr>
+             <td bgcolor="#e0e0e0">Cosha
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">CrWind
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">Dabom
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">Dialer
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">Dogowar
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c72bbdd7843db2d767eee389819d982755fd866bd62465face097236b152c3813.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Cosha')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-cebf249801e6db5fb877cadbc9b7771466afd6ecc30df5cc340471036d71cf4ba.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('CrWind')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c455832f019dcf3a01044533a38190632386d2a7dc827a19bea2c5a73adeef244.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Dabom')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c7b4424170c2c2e3f24a7489da1645dd4f48cf9612c1e93cf9f9f4170ea3fd3b4.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Dialer')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-cc1a94e9fd0a6bda7e5ead89d8ef9ee064aeccdaf65238bf604f33e987a8656b9.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Dogowar')">
+            </td>
+        </tr>
+        <tr>
+             <td bgcolor="#e0e0e0">Dougalek
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">DroidDream
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">DroidKungFu
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">DroidRooter
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+                <td bgcolor="#e0e0e0">DroidSheep
+                <span class="fa fa-angle-right" style="float:right"></span>
+                </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-ce13ad0dc56eb6c81334fe1634ed48238b55be7e3b5e595f7a4a0beb68db0c3db.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('Dougalek')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c07612382983aff33fa9382371ad1b183deef3df620f6d0221754c0a2f6d29978.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('DroidDream')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c00cf11a8b905e891a454e5b3fcae41f3ed405e3c5d0f9c1fce310de4a88c42d0.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('DroidKungFu')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c94112b350d0feceff0a788fb042706cb623a55b559ab4697cb10ca6200ea7714.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('DroidRooter')">
+            </td>
+            <td>
+                <img src="{{ url_for('static', filename='data/drebin/t-c578d21fc5aaa2c2f7b6c7ccbf2ab4fa64bc21976b0742e57846019153b2530c9.png') }}"
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;" ng-click="imgClick('DroidSheep')">
+            </td>
+        </tbody>
+    </table>
+
+{% endblock %}
+
+{% block footer %}
+{{ super() }}
+<script src="{{ url_for('static', filename="js/myAngjs.js") }}"></script>
+{% endblock %}

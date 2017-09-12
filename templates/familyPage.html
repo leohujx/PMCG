@@ -1,0 +1,43 @@
+
+
+{% extends "base.html" %}
+
+{% block title %} family Page{% endblock %}
+
+
+{% block subtitle %}Samples{% endblock %}
+
+{% block content %}
+    <table class="table table-condensed table-bordered table-stripped table-responsive table-hover" style="word-break: break-all; word-wrap: break-word;
+        border:3px solid #d00;width: 100%;max-width: 100%;">
+        <tbody class="family-tbody">
+            {% for i in range(0, rownum) %}
+                    <tr>
+                        {% for j in range(0, colnum) %}
+                            {% if (i*colnum+j) >= infolen %} {% break %} {% endif %}
+                            <td bgcolor="#e0e0e0">{{ info[i*colnum+j]['title'] }}
+                                <span class="fa fa-angle-right" style="float:right"></span>
+                        {% endfor %}
+                    </tr>
+                        {% for j in range(0, colnum) %}
+                            {% if (i*colnum+j) >= infolen %} {% break %} {% endif %}
+                            <td>
+                            <img src= {{ "/static/"  + info[i*colnum+j]['pngsrc'] }}
+                class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;"
+                            onclick="appDetail('{{ info[i*colnum+j]['title'] + ".gexf" }}', '{{ info[i*colnum+j]['title']+".j" }}')" />
+                            </td>
+                        {% endfor %}
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block footer %}
+{{ super() }}
+    <script>
+        var detailUrl = "/appdetail";
+        function appDetail(gexf, json) {
+            window.location.href = detailUrl + "?gexf=" + gexf + "&json=" + json;
+        }
+    </script>
+{% endblock %}
