@@ -19,14 +19,16 @@
                                 <span class="fa fa-angle-right" style="float:right"></span>
                         {% endfor %}
                     </tr>
+                <tr>
                         {% for j in range(0, colnum) %}
                             {% if (i*colnum+j) >= infolen %} {% break %} {% endif %}
                             <td>
                             <img src= {{ "/static/"  + info[i*colnum+j]['pngsrc'] }}
                 class="thumbimg" style="width: 160px;height: 160px; border:2px solid #b52e31;"
-                            onclick="appDetail('{{ info[i*colnum+j]['title'] + ".gexf" }}', '{{ info[i*colnum+j]['title']+".j" }}')" />
+                            onclick="appDetail('{{ 'c' + info[i*colnum+j]['title'] + ".gexf" }}', '{{ 'c' + info[i*colnum+j]['title']+".j" }}', '{{ fname }}')" />
                             </td>
                         {% endfor %}
+                </tr>
             {% endfor %}
         </tbody>
     </table>
@@ -36,8 +38,8 @@
 {{ super() }}
     <script>
         var detailUrl = "/appdetail";
-        function appDetail(gexf, json) {
-            window.location.href = detailUrl + "?gexf=" + gexf + "&json=" + json;
+        function appDetail(gexf, json, fname) {
+            window.location.href = detailUrl + "?fname=" + fname + "&gexf=" + gexf + "&json=" + json;
         }
     </script>
 {% endblock %}
