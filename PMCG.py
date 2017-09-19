@@ -68,12 +68,13 @@ def getDetail():
     fname = request.args.get('fname', None)
     gexf = request.args.get('gexf', None)
     json = request.args.get('json', None)
+    gexfFilePath = functions.getDataUrl(os.path.join(fname, gexf))
     if not gexf or not json or not fname:
         abort(404)
     if not functions.is_same(gexf, json):
         abort(404)
     # dirPath = os.path.join(staticPath, os.path.join('data', 'drebin'))
-    return render_template('appdetail.html',appname=gexf.split('.')[0],fname=fname, json=json)
+    return render_template('appdetail.html',appname=gexf.split('.')[0],fname=fname, json=json, gexf=gexfFilePath)
 
 # @app.errorhandler(404)
 # def notFound(errorMsg):

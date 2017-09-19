@@ -50,6 +50,9 @@ def getDataPath(subPath):
     fullPath = os.path.join(dirPath, subPath)
     return fullPath
 
+def getDataUrl(subPath):
+    return os.path.join(os.path.join('static/data','drebin'), subPath)
+
 def getJson(jsonPath):
     with open(jsonPath, 'r') as f:
         data = f.read()

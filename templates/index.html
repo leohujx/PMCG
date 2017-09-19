@@ -13,7 +13,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 {% block subtitle %}Malware Families{% endblock %}
 {% block content %}
 <table class="table table-condensed table-bordered table-stripped " style="word-break: break-all; word-wrap: break-word;
-        border:3px solid #d00;width: 100%;max-width: 100%;" ng-controller="tableController">
+        border:3px solid #d00;width: 100%;max-width: 100%;height: auto;overflow:scroll;" ng-controller="tableController">
         <tbody class="family-tbody">
             {% for i in range(0, rownum) %}
                 <tr>

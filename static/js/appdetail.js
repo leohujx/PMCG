@@ -6,9 +6,25 @@ var app = angular.module("myapp", ["ngTable", "ngResource"]);
 
 var url = "/appjson";
 (function () {
+
     app.controller("demoController", pmcgController);
-    pmcgController.$inject = ["NgTableParams", "pmcgService"];
-    function pmcgController(NgTableParams, pmcgService) {
+    // pmcgController.$inject = ["NgTableParams", "pmcgService"];
+    function pmcgController(NgTableParams, pmcgService, $scope) {
+
+        $scope.modalcontent = "";
+        $scope.modalTitle = "";
+        var infoDialog = $("#dialog-info");
+        $scope.pclick = function (event) {
+            // console.log(event);
+            var target = event.target;
+            var value = target.attributes.id.value;
+            // console.log(target);
+            console.log(value);
+            var targetObj = $("#"+value).siblings().andSelf();
+            // targetObj.css({"color":"red"});
+            targetObj.toggleClass("tdcs");
+        };
+
         var initialParams = {
             count: 7 // initial page size
         };

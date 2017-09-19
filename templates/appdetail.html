@@ -51,12 +51,31 @@ text {
 .linetext {
     font-size: 12px Microsoft YaHei;
 }
+.tdcs{
+    white-space: normal; !important;
+    -ms-word-break: break-all;!important;
+    word-break: break-all;!important;
+    word-wrap: break-word;!important;
+}
+table td{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow:hidden;
+}
+table td a{
+    text-decoration: none;
+    cursor: text;
+    color: #B52E31;
+}
+.red{
+    color:red;
+}
     </style>
 {% endblock %}
 
 {% block subtitle %} {{ appname }}{% endblock %}
  {% block content %}
-             <div class="modal fade" id="dialog-confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+       <div class="modal fade" id="dialog-confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
              style="height: 100%;">
             <div class="modal-dialog" style="width: 50%;">
                 <div class="modal-content">
@@ -74,12 +93,38 @@ text {
                 </div><!-- /.modal-content -->
             </div><!-- /.modal -->
         </div>
+
+
+
     <div id="d3layout" style="width: 100%;height: 100%;">
 
     </div>
 
      <div ng-controller="demoController as demo" style="font-size: 16px;">
-        <h2 class="page-header">Nodes</h2>
+
+      <div class="modal fade" id="dialog-info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+             style="height: 100%;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" ng-bind="modalTitle">
+                           java code
+                        </h4>
+                    </div>
+                    <div class="modal-body" id="content" style="height:auto;overflow: auto;word-break: break-all;word-wrap: break-word;"
+                        ng-bind="modalcontent">
+
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+
+         <a class="btn btn-primary" href="{{ gexf }}">下载gexf文件</a>
+
+        <h2 class="page-header" style="margin-top: 20px;">Nodes</h2>
 {#        <div class="bs-callout bs-callout-info">#}
 {#          <h4>Overview</h4>#}
 {#          <p>Example of fetching data from the github api.</p>#}
@@ -87,19 +132,22 @@ text {
 {#            Demonstrates <em>one</em> of the ways data can be loaded into the table asynchronously by supplying <code>NgTableParams</code> a custom <code>getData</code> function.#}
 {#          </p>#}
 {#        </div>#}
+
         <div loading-container="demo.tableParams.settings().$loading">
-          <table ng-table="demo.tableParams" class="table table-condensed table-bordered table-striped">
-            <tr ng-repeat="issue in $data">
-              <td data-title="'No.'">{{issue.NodeId}}</td>
-              <td data-title="'Label'">{{issue.label}}</td>
-              <td data-title="'Type'">{{issue.type}}</td>
-              <td data-title="'V'">{{issue.detail}}</td>
-               <td data-title="'String'">{{issue.riskystring}}</td>
+          <table ng-table="demo.tableParams" class="table table-condensed table-bordered table-striped"
+          style="table-layout: fixed;">
+            <tr ng-repeat="issue in $data" ng-dblclick="pclick($event)">
+              <td data-title="'No.'" id="{{issue.NodeId}}Id">{{issue.NodeId}}</td>
+              <td data-title="'Label'" ng-attr-title="{{issue.label}}"  id="{{issue.NodeId}}Laebl">{{issue.label}}</td>
+              <td data-title="'Type'" ng-attr-title="{{issue.type}}" id="{{issue.NodeId}}type">{{issue.type}}</td>
+              <td data-title="'V'" ng-attr-title="{{issue.detail}}" id="{{issue.NodeId}}detail">{{issue.detail}}</td>
+               <td data-title="'String'" ng-attr-title="{{issue.riskystring}}"  id="{{issue.NodeId}}riskystring">{{issue.riskystring}}</td>
                 <td data-title="'Code'"><button>Code View</button></td>
             </tr>
           </table>
         </div>
       </div>
+
 
      <div style="display: none;" id="fname">{{ fname }}</div>
      <div style="display: none;" id="jname">{{ json }}</div>
